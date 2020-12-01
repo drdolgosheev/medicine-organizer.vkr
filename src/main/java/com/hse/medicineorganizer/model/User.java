@@ -29,6 +29,6 @@ public class User extends BaseEntity {
     @Column(name = "photo_url")
     private String photoUrl;
 
-//    private List<Drug>
+//  TODO:  private List<Drug>
 
 }
