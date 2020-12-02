@@ -2,9 +2,8 @@ package com.hse.medicineorganizer.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -29,6 +28,10 @@ public class User extends BaseEntity {
     @Column(name = "photo_url")
     private String photoUrl;
 
-//  TODO:  private List<Drug>
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_kit",
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "drug_id", referencedColumnName = "id")})
+    private List<Drug> medKit;
 
 }

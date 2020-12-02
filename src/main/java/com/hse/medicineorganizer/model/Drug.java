@@ -48,7 +48,11 @@ public class Drug extends BaseEntity {
     @Column(name = "num_of_pills")
     Integer numberOfPills;
 
-//  TODO:  List<User>
+    @Column(name = "recipe_url")
+    String recipeUrl;
+
+    @ManyToMany(mappedBy = "medKit", fetch = FetchType.LAZY)
+    List<User> userList;
 
     public String getName() {
         return name;
