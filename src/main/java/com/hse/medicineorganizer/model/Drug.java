@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 public class Drug extends BaseEntity {
 
+
     @Column(name = "name")
     String name;
 
@@ -48,4 +49,76 @@ public class Drug extends BaseEntity {
     Integer numberOfPills;
 
 //  TODO:  List<User>
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public DrugGroup getDrugGroup() {
+        return drugGroup;
+    }
+
+    public void setDrugGroup(DrugGroup drugGroup) {
+        this.drugGroup = drugGroup;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Date getProdDate() {
+        return prodDate;
+    }
+
+    public void setProdDate(Date prodDate) {
+        this.prodDate = prodDate;
+    }
+
+    public Date getExpDate() {
+        return expDate;
+    }
+
+    public void setExpDate(Date expDate) {
+        this.expDate = expDate;
+    }
+
+    public Boolean getNeedRecipe() {
+        return needRecipe;
+    }
+
+    public void setNeedRecipe(Boolean needRecipe) {
+        this.needRecipe = needRecipe;
+    }
+
+    public Date getStartTake() {
+        return startTake;
+    }
+
+    public void setStartTake(Date startTake) {
+        this.startTake = startTake;
+    }
+
+    public Integer getRecivingFrec() {
+        return recivingFrec;
+    }
+
+    public void setRecivingFrec(Integer recivingFrec) {
+        this.recivingFrec = recivingFrec;
+    }
+
+    public Integer getNumberOfPills() {
+        return numberOfPills;
+    }
+
+    public void setNumberOfPills(Integer numberOfPills) {
+        this.numberOfPills = numberOfPills;
+    }
 }
