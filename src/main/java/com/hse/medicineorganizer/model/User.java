@@ -10,13 +10,13 @@ import java.util.List;
 @Data
 public class User extends BaseEntity {
 
-    @Column(name = "name")
+    @Column(name = "user_name")
     private String name;
 
-    @Column(name = "surname")
+    @Column(name = "user_surname")
     private String surname;
 
-    @Column(name = "patronymic")
+    @Column(name = "user_patronymic")
     private String patronymic;
 
     @Column(name = "email")
