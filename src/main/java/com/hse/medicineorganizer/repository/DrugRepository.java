@@ -12,8 +12,4 @@ public interface DrugRepository extends JpaRepository<Drug, Integer> {
     Drug getById(Integer id);
 
     List<Drug> getAllByDrugGroup(DrugGroup drugGroup);
-
-    boolean existsById(Integer id);
-
-    void deleteById(Integer id);
 }
