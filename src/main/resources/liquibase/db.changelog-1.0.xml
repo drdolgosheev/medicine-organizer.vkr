@@ -154,7 +154,7 @@
     </changeSet>
 
     <changeSet id="1.0.7" author="dolgosheev.dmitriy">
-        <createTable tableName="user_drugs">
+        <createTable tableName="user_kit">
             <column name="user_id" type="INT">
             </column>
 
@@ -165,7 +165,7 @@
 
     <changeSet id="1.0.8" author="dolgosheev.dmitriy">
         <addForeignKeyConstraint baseColumnNames="user_id"
-                                 baseTableName="user_drugs"
+                                 baseTableName="user_kit"
                                  constraintName="fk_user_drugs"
                                  onDelete="CASCADE"
                                  onUpdate="RESTRICT"
@@ -175,7 +175,7 @@
 
     <changeSet id="1.0.9" author="dolgosheev.dmitriy">
         <addForeignKeyConstraint baseColumnNames="drug_id"
-                                 baseTableName="user_drugs"
+                                 baseTableName="user_kit"
                                  constraintName="fk_drugs_user"
                                  onDelete="CASCADE"
                                  onUpdate="RESTRICT"

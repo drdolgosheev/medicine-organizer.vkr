@@ -14,7 +14,7 @@ public class Diagnosis extends BaseEntity {
     private String name;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "user_fmembers",
+    @JoinTable(name = "diagnosis_fmembers",
             joinColumns = {@JoinColumn(name = "diagnosis_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "fmember_id", referencedColumnName = "id")})
     private List<FamilyMembers> familyMembers;
