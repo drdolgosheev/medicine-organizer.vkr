@@ -8,7 +8,10 @@ import com.hse.medicineorganizer.repository.DiagnosisRepository;
 import com.hse.medicineorganizer.repository.DrugRepository;
 import com.hse.medicineorganizer.repository.UserRepository;
 import com.hse.medicineorganizer.service.UserService;
+import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.XSlf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -23,12 +26,16 @@ public class UserServiceImplementation implements UserService {
     private final DiagnosisRepository diagnosisRepository;
     private final BCryptPasswordEncoder passwordEncoder;
 
+
     public UserServiceImplementation(UserRepository userRepository, DrugRepository drugRepository,
                                      DiagnosisRepository diagnosisRepository, BCryptPasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.drugRepository = drugRepository;
         this.diagnosisRepository = diagnosisRepository;
         this.passwordEncoder = passwordEncoder;
+
+        log.info("Info");
+
     }
 
     @Override
@@ -37,7 +44,6 @@ public class UserServiceImplementation implements UserService {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         User regUser = userRepository.save(user);
-
 
         return null;
     }
