@@ -8,10 +8,7 @@ import com.hse.medicineorganizer.repository.DiagnosisRepository;
 import com.hse.medicineorganizer.repository.DrugRepository;
 import com.hse.medicineorganizer.repository.UserRepository;
 import com.hse.medicineorganizer.service.UserService;
-import lombok.extern.java.Log;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
-import lombok.extern.slf4j.XSlf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
